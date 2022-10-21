@@ -37,12 +37,14 @@ final class Main {
         final float pushCheck = -1;
         final float peekCheck = -2;
         final float popCheck = -3;
+        final float clearCheck = -4;
 
         while (true) {
             // Input & Process
             float tempNum = 0;
             float tempInput = 0;
-            System.out.print("Enter -1 to push, -2 to peek, -3 to pop: ");
+            System.out.print(
+                "Enter -1 to push, -2 to peek, -3 to pop, -4 to clear: ");
             tempInput = sc.nextFloat();
 
             if (tempInput == popCheck) {
@@ -61,6 +63,8 @@ final class Main {
                 } catch (java.util.InputMismatchException ex) {
                     System.out.println("Not a Number!");
                 }
+            } else if (tempInput == clearCheck) {
+                myStack.clearStack();
             } else {
                 System.out.println("Invalid Input. Please Try Again.");
             }

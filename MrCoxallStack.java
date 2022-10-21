@@ -65,4 +65,11 @@ public class MrCoxallStack {
         }
         return peekOutput;
     }
+
+    /**
+     * This method clears the stack.
+     */
+    public void clearStack() {
+        stack.clear();
+    }
 }
